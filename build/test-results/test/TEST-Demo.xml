@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Demo" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-16T10:55:49" hostname="DESKTOP-FP8E42F" time="38.338">
+  <properties/>
+  <testcase name="archiveANote" classname="Demo" time="21.759"/>
+  <testcase name="insertNewNote" classname="Demo" time="16.577"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[nov 16, 2021 11:55:57 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+nov 16, 2021 11:56:21 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
