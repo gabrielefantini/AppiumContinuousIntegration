@@ -1,6 +1,6 @@
 name: Appium CI
 # on push we will trigger our code
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -11,6 +11,47 @@ jobs:
         target: [default]
     steps:
     - uses: actions/checkout@v2 #checkout the code
+
+    - name: Download APK artifact
+      uses: dawidd6/action-download-artifact@v2
+      with:
+        # Optional, GitHub token, a Personal Access Token with `public_repo` scope if needed
+        # Required, if artifact is from a different repo
+        # Required, if repo is private a Personal Access Token with `repo` scope is needed
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        # Required, workflow file name or ID
+        workflow: workflow_name.yml
+        # Optional, the status or conclusion of a completed workflow to search for
+        # Can be one of a workflow conclusion:
+        #   "failure", "success", "neutral", "cancelled", "skipped", "timed_out", "action_required"
+        # Or a workflow status:
+        #   "completed", "in_progress", "queued"
+        workflow_conclusion: success
+        # Optional, will get head commit SHA
+        pr: ${{github.event.pull_request.number}}
+        # Optional, no need to specify if PR is
+        commit: ${{github.event.pull_request.head.sha}}
+        # Optional, will use the branch
+        branch: master
+        # Optional, defaults to all types
+        event: push
+        # Optional, will use specified workflow run
+        run_id: 1122334455
+        # Optional, run number from the workflow
+        run_number: 34
+        # Optional, uploaded artifact name,
+        # will download all artifacts if not specified
+        # and extract them in respective subdirectories
+        # https://github.com/actions/download-artifact#download-all-artifacts
+        name: artifact_name
+        # Optional, directory where to extract artifact. Defaults to the artifact name (see `name` input)
+        path: extract_here
+        # Optional, defaults to current repo
+        repo: ${{github.repository}}
+        # Optional, check the workflow run whether it has an artifact
+        # then will get the last available artifact from previous workflow
+        # default false, just try to download from the last one
+        check_artifacts: false
 
     - name: Set up JDK 16
       uses: actions/setup-java@v2
@@ -53,6 +94,6 @@ jobs:
         # Required sender full name (address can be skipped):
         from: Luke Skywalker # <user@example.com>
         # Optional HTML body read from file:
-        html_body: file:///Users/runner/work/AppiumGitHubActions/AppiumGitHubActions/build/reports/tests/test/index.html
+        html_body: file:///Users/runner/work/AppiumContinuousIntegration/AppiumContinuousIntegration/build/reports/tests/test/index.html
         #TODO da modificare in futuro per rendere più leggibile il report
-        attachments: file:///Users/runner/work/AppiumGitHubActions/AppiumGitHubActions/build/reports/tests
+        attachments: file:///Users/runner/work/AppiumContinuousIntegration/AppiumContinuousIntegration/build/reports/tests
