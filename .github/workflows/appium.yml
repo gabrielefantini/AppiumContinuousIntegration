@@ -97,3 +97,8 @@ jobs:
         html_body: file:///Users/runner/work/AppiumContinuousIntegration/AppiumContinuousIntegration/build/reports/tests/test/index.html
         #TODO da modificare in futuro per rendere più leggibile il report
         attachments: file:///Users/runner/work/AppiumContinuousIntegration/AppiumContinuousIntegration/build/reports/tests
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: test-report
+        path: /Users/runner/work/AppiumContinuousIntegration/AppiumContinuousIntegration/build/reports/tests/
