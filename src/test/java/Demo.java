@@ -62,6 +62,7 @@ public class Demo {
                 "New Note"
         );
     }
+    /*
     @Test
     void archiveANote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -112,7 +113,7 @@ public class Demo {
 
 
         Assert.assertEquals(driver.findElement(By.id("it.feio.android.omninotes.alpha:id/note_title")).getText(), "New Note");
-    }
+    }*/
 
     @AfterClass
     public void tearDown()
@@ -125,6 +126,13 @@ public class Demo {
             Robot r = new Robot();
             // It saves screenshot to desired path
             String path = "/screenshot/Screen"+ screenNumber + ".png";
+            File myObj = new File(path);
+
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
 
             screenNumber++;
 
@@ -132,7 +140,7 @@ public class Demo {
             Rectangle capture =
                     new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
             BufferedImage Image = r.createScreenCapture(capture);
-            ImageIO.write(Image, "png", new File(path));
+            ImageIO.write(Image, "png", myObj);
             System.out.println("Screenshot saved");
         }
         catch (AWTException | IOException ex) {
