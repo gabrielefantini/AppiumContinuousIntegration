@@ -18,12 +18,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Demo {
 
     WebDriver driver;
+    public static int screenNumber = 0;
 
     @Test
     void insertNewNote() throws MalformedURLException {
@@ -34,22 +40,22 @@ public class Demo {
         driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
-
+        screenshot();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button")))
             .click();
-
+        screenshot();
         wait.until(ExpectedConditions.presenceOfElementLocated((By.id("it.feio.android.omninotes.alpha:id/fab_note"))))
             .click();
-
+        screenshot();
         MobileElement el3 = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/detail_title")));
         el3.click();
         el3.sendKeys("New Note");
-
+        screenshot();
         wait.until(ExpectedConditions.presenceOfElementLocated((MobileBy.AccessibilityId("drawer open"))))
             .click();
-
+        screenshot();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/note_title")));
-
+        screenshot();
         Assert.assertEquals(
                 driver.findElement(By.id("it.feio.android.omninotes.alpha:id/note_title"))
                         .getText(),
@@ -112,5 +118,25 @@ public class Demo {
     public void tearDown()
     {
         driver.quit();
+    }
+
+    public void screenshot(){
+        try {
+            Robot r = new Robot();
+            // It saves screenshot to desired path
+            String path = System.getProperty("user.dir")+"/screenshot/Screen"+ screenNumber + ".png";
+
+            screenNumber++;
+
+            // Used to get ScreenSize and capture image
+            Rectangle capture =
+                    new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+            BufferedImage Image = r.createScreenCapture(capture);
+            ImageIO.write(Image, "png", new File(path));
+            System.out.println("Screenshot saved");
+        }
+        catch (AWTException | IOException ex) {
+            System.out.println(ex);
+        }
     }
 }

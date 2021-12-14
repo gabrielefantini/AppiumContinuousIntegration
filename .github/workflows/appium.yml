@@ -63,6 +63,18 @@ jobs:
     - name: Giving Gradlew correct permissions
       run: chmod +x gradlew
 
+    - name: Add X11
+      run: |
+        brew install --cask xquartz
+        sudo /opt/X11/libexec/privileged_startx || true
+      working-directory: .
+
+    - name: Start Xvfb
+      run: |
+        PATH=$PATH:/opt/X11/bin
+        Xvfb :1 &
+        export DISPLAY=:1
+
     - name: Run Appium Tests
       uses: reactivecircus/android-emulator-runner@v2 # install and create the Emulator
       with:
@@ -70,6 +82,7 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         profile: Nexus 6
+        emulator-options: -no-snapshot-save -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
         script: ./gradlew test --info # running our test with info to check the results
 
     - name: Send mail
@@ -98,3 +111,7 @@ jobs:
       with:
         name: test-report
         path: /Users/runner/work/AppiumContinuousIntegration/AppiumContinuousIntegration/build/reports/tests/
+    - uses: actions/upload-artifact@v2
+      with:
+        name: screenshot
+        path: /Users/runner/work/AppiumContinuousIntegration/AppiumContinuousIntegration/screenshot/
