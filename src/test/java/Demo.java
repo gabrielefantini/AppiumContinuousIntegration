@@ -124,7 +124,7 @@ public class Demo {
         try {
             Robot r = new Robot();
             // It saves screenshot to desired path
-            String path = System.getProperty("user.dir")+"/screenshot/Screen"+ screenNumber + ".png";
+            String path = "/screenshot/Screen"+ screenNumber + ".png";
 
             screenNumber++;
 
