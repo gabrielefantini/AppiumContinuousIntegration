@@ -31,7 +31,7 @@ public class Demo {
     WebDriver driver;
     public static int screenNumber = 0;
 
-    @Test
+    /*@Test
     void insertNewNote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -61,8 +61,8 @@ public class Demo {
                         .getText(),
                 "New Note"
         );
-    }
-    /*
+    }*/
+
     @Test
     void archiveANote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -72,20 +72,20 @@ public class Demo {
         driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
-
+        screenshot();
         wait.until(ExpectedConditions.presenceOfElementLocated((By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"))))
             .click();
-
+        screenshot();
         wait.until(ExpectedConditions.presenceOfElementLocated((By.id("it.feio.android.omninotes.alpha:id/fab_note"))))
             .click();
-
+        screenshot();
         MobileElement el3 = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/detail_title")));
         el3.click();
         el3.sendKeys("New Note");
-
+        screenshot();
         wait.until(ExpectedConditions.presenceOfElementLocated((MobileBy.AccessibilityId("drawer open"))))
             .click();
-
+        screenshot();
         //swipe left note to archive it
         int screenWidth = (int) driver.manage().window().getSize().width;
         int screenWidth90 = (int) (.9 * screenWidth);
@@ -102,18 +102,17 @@ public class Demo {
                 .moveTo(PointOption.point(screenWidth10, elementY))
                 .release()
                 .perform();
-
+        screenshot();
         MobileElement el6 = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("drawer open")));
         el6.click();
-
+        screenshot();
         MobileElement el7 = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.ListView[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout")));
         el7.click();
-
+        screenshot();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/note_title")));
-
-
+        screenshot();
         Assert.assertEquals(driver.findElement(By.id("it.feio.android.omninotes.alpha:id/note_title")).getText(), "New Note");
-    }*/
+    }
 
     @AfterClass
     public void tearDown()
