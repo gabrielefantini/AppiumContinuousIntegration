@@ -125,7 +125,7 @@ public class Demo {
         try {
             Robot r = new Robot();
             // It saves screenshot to desired path
-            String path = "/screenshot/Screen"+ screenNumber + ".png";
+            String path = System.getProperty("user.dir") + "/screenshot/Screen"+ screenNumber + ".png";
             File myObj = new File(path);
 
             if (myObj.createNewFile()) {
