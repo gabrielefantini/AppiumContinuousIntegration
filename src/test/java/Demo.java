@@ -116,7 +116,7 @@ public class Demo {
     }*/
 
     @Test
-    void searchNote() throws MalformedURLException {
+    void longTestRun() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
@@ -124,86 +124,99 @@ public class Demo {
         driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
+
         screenshot();
-        MobileElement el1 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
-        el1.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"))).click();
         screenshot();
-        MobileElement el2 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/fab_note"));
-        el2.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/fab_checklist"))).click();
         screenshot();
-        MobileElement el3 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/detail_title"));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/detail_title")));
+        screenshot();
+        MobileElement el3 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/detail_title"));
         el3.click();
         screenshot();
-        el3.sendKeys("X");
+        el3.sendKeys("New CheckList");
         screenshot();
-        MobileElement el4 = (MobileElement) driver
-                .findElement(MobileBy.AccessibilityId("drawer open"));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText")));
+        screenshot();
+        MobileElement el4 = (MobileElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText"));
         el4.click();
         screenshot();
-        MobileElement el5 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
+        el4.sendKeys("CheckList Item 1");
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.EditText")));
+        screenshot();
+        MobileElement el5 = (MobileElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.EditText"));
         el5.click();
         screenshot();
-        MobileElement el6 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/fab_note"));
-        el6.click();
+        el5.sendKeys("CheckList Item 2");
         screenshot();
-        MobileElement el7 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/detail_title"));
-        el7.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/reminder_layout"))).click();
         screenshot();
-        MobileElement el8 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/detail_title"));
-        el8.sendKeys("Y");
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/buttonPositive"))).click();
         screenshot();
-        MobileElement el9 = (MobileElement) driver
-                .findElement(MobileBy.AccessibilityId("drawer open"));
-        el9.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("drawer open"))).click();
         screenshot();
-        MobileElement el10 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
-        el10.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"))).click();
         screenshot();
-        MobileElement el11 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/fab_note"));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/fab_note"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/detail_title")));
+        screenshot();
+        MobileElement el11 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/detail_title"));
         el11.click();
         screenshot();
-        MobileElement el12 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/detail_title"));
+        el11.sendKeys("New Note");
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("it.feio.android.omninotes.alpha:id/detail_content")));
+        MobileElement el12 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/detail_content"));
+        screenshot();
         el12.click();
         screenshot();
-        el12.sendKeys("Z");
+        el12.sendKeys("New Note Content");
         screenshot();
-        MobileElement el13 = (MobileElement) driver
-                .findElement(MobileBy.AccessibilityId("drawer open"));
-        el13.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("drawer open"))).click();
         screenshot();
-        MobileElement el14 = (MobileElement) driver
-                .findElement(MobileBy.AccessibilityId("Search"));
-        el14.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Sort"))).click();
         screenshot();
-        MobileElement el15 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/search_plate"));
-        el15.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.LinearLayout"))).click();
         screenshot();
-        MobileElement el16 = (MobileElement) driver
-                .findElement(By.id("it.feio.android.omninotes.alpha:id/search_src_text"));
-        el16.sendKeys("X");
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[2]"))).click();
         screenshot();
-
-        ((AndroidDriver)driver).pressKey(new KeyEvent(AndroidKey.ENTER));
-
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.CheckBox"))).click();
         screenshot();
-
-        Assert.assertEquals(
-                driver.findElement(
-                        By.id("it.feio.android.omninotes.alpha:id/note_title")
-                ).getText(),
-                "X"
-        );
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("drawer open"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("More options"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[6]/android.widget.LinearLayout"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("drawer open"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.ListView[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.TextView"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("More options"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[2]/android.widget.LinearLayout"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id(("it.feio.android.omninotes.alpha:id/md_buttonDefaultPositive")))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("drawer open"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.ListView[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.TextView"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("drawer open"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.ListView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.TextView"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.CheckBox"))).click();
+        screenshot();
+        wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("drawer open"))).click();
+        screenshot();
     }
 
     @AfterClass
