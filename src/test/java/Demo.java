@@ -116,7 +116,7 @@ public class Demo {
     }*/
 
     @Test
-    void longTestRun() throws MalformedURLException {
+    void longTestRun() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
@@ -225,7 +225,8 @@ public class Demo {
         driver.quit();
     }
 
-    public void screenshot(){
+    public void screenshot() throws InterruptedException {
+        Thread.sleep(1000);
         try {
             Robot r = new Robot();
             // It saves screenshot to desired path
