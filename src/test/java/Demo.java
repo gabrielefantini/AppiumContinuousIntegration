@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -24,7 +25,7 @@ import java.time.Duration;
 
 public class Demo {
 
-    WebDriver driver;
+    AndroidDriver<AndroidElement> driver;
 
     @Test
     void insertNewNote() throws MalformedURLException {
@@ -33,6 +34,7 @@ public class Demo {
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
         driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         MobileElement el1 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
