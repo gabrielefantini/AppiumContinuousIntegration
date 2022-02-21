@@ -364,6 +364,7 @@ public class Demo {
 
     }
     //Eliminazione Nuova Categoria
+    /*
     @Test
     void deleteCategory() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -417,7 +418,7 @@ public class Demo {
         } catch (org.openqa.selenium.NoSuchElementException e) {
             Assert.assertTrue(true);
         }
-    }
+    }*/
     //Eliminazione Note e svuotamento cestino
     @Test
     void deleteNoteAndEmptyTrash() throws MalformedURLException, InterruptedException {
