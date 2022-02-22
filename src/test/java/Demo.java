@@ -66,7 +66,7 @@ public class Demo {
                         .getText(),
                 "New Note Content"
         );
-    }*/
+    }
     //Inserimento lista di controllo
     @Test
     void insertNewChecklist() throws MalformedURLException {
@@ -101,8 +101,10 @@ public class Demo {
                 noteContent.contains("New itemNew Checklist Item")
         );
     }
+    */
+
     //Archiviazione nota testuale
-    /*@Test
+    @Test
     void archiveNote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -158,6 +160,7 @@ public class Demo {
 
     }
     //Cerca tra le note
+    /*
     @Test
     void searchNote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
