@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
 public class Demo {
     AndroidDriver<AndroidElement> driver;
     //Inserimento nota testuale
-    @Test
+    /*@Test
     void insertNewNote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -66,9 +66,9 @@ public class Demo {
                         .getText(),
                 "New Note Content"
         );
-    }
+    }*/
     //Inserimento lista di controllo
-    /*@Test
+    @Test
     void insertNewChecklist() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -102,7 +102,7 @@ public class Demo {
         );
     }
     //Archiviazione nota testuale
-    @Test
+    /*@Test
     void archiveNote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
