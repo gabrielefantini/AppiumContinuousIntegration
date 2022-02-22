@@ -481,7 +481,7 @@ public class Demo {
 
     }
     //Eliminazione Nuova Categoria
-    /*@Test
+    @Test
     void deleteCategory() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -550,7 +550,7 @@ public class Demo {
         } catch (org.openqa.selenium.NoSuchElementException e) {
             Assert.assertTrue(true);
         }
-    }*/
+    }
     //Eliminazione Note e svuotamento cestino
     @Test
     void deleteNoteAndEmptyTrash() throws MalformedURLException, InterruptedException {
