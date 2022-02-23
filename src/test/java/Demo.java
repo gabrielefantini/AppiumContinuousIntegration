@@ -321,7 +321,7 @@ public class Demo {
                 "Note 3"
         );
 
-    }*/
+    }
 
     //Aggiunta Nuova Categoria
     @Test
@@ -367,8 +367,8 @@ public class Demo {
                 "1"
         );
 
-    }
-    /*
+    }*/
+
     //Eliminazione Nuova Categoria
     @Test
     void deleteCategory() throws MalformedURLException, InterruptedException {
@@ -424,6 +424,7 @@ public class Demo {
             Assert.assertTrue(true);
         }
     }
+       /*
     //Eliminazione Note e svuotamento cestino
     @Test
     void deleteNoteAndEmptyTrash() throws MalformedURLException, InterruptedException {
