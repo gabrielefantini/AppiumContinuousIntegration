@@ -272,7 +272,7 @@ public class Demo {
                 "New Note With Reminder"
         );
     }
-    */
+
     //Ordinamento note
     @Test
     void sortNotes() throws MalformedURLException, InterruptedException {
@@ -321,8 +321,8 @@ public class Demo {
                 "Note 3"
         );
 
-    }
-    /*
+    }*/
+
     //Aggiunta Nuova Categoria
     @Test
     void insertNewCategory() throws MalformedURLException, InterruptedException {
@@ -368,6 +368,7 @@ public class Demo {
         );
 
     }
+    /*
     //Eliminazione Nuova Categoria
     @Test
     void deleteCategory() throws MalformedURLException, InterruptedException {
