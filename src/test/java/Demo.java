@@ -367,7 +367,7 @@ public class Demo {
                 "1"
         );
 
-    }*/
+    }
 
     //Eliminazione Nuova Categoria
     @Test
@@ -419,12 +419,12 @@ public class Demo {
 
         try {
             driver.findElement(By.xpath("//*[contains(@text, 'New Category')]"));
-            Assert.assertTrue(false);
+            Assert.fail();
         } catch (org.openqa.selenium.NoSuchElementException e) {
             Assert.assertTrue(true);
         }
     }
-       /*
+    */
     //Eliminazione Note e svuotamento cestino
     @Test
     void deleteNoteAndEmptyTrash() throws MalformedURLException, InterruptedException {
@@ -485,6 +485,7 @@ public class Demo {
 
         Assert.assertEquals(driver.findElements(By.id("it.feio.android.omninotes.alpha:id/note_title")).size(), 0);
     }
+    /*
     //Navigazione sezione Impostazioni
     @Test
     void infoMenu() throws MalformedURLException, InterruptedException {
