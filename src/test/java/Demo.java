@@ -231,7 +231,7 @@ public class Demo {
         );
     }
     //Inserimento nota testuale con promemoria
-    */
+
     @Test
     void insertNewNoteWithReminder() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -272,7 +272,7 @@ public class Demo {
                 "New Note With Reminder"
         );
     }
-    /*
+    */
     //Ordinamento note
     @Test
     void sortNotes() throws MalformedURLException, InterruptedException {
@@ -322,6 +322,7 @@ public class Demo {
         );
 
     }
+    /*
     //Aggiunta Nuova Categoria
     @Test
     void insertNewCategory() throws MalformedURLException, InterruptedException {
