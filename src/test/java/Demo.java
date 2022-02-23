@@ -160,7 +160,7 @@ public class Demo {
 
     }
     //Cerca tra le note
-    */
+
     @Test
     void searchNote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -231,7 +231,7 @@ public class Demo {
         );
     }
     //Inserimento nota testuale con promemoria
-    /*
+    */
     @Test
     void insertNewNoteWithReminder() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -272,6 +272,7 @@ public class Demo {
                 "New Note With Reminder"
         );
     }
+    /*
     //Ordinamento note
     @Test
     void sortNotes() throws MalformedURLException, InterruptedException {
