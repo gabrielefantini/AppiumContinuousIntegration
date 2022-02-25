@@ -424,7 +424,7 @@ public class Demo {
             Assert.assertTrue(true);
         }
     }
-    */
+
     //Eliminazione Note e svuotamento cestino
     @Test
     void deleteNoteAndEmptyTrash() throws MalformedURLException, InterruptedException {
@@ -485,7 +485,7 @@ public class Demo {
 
         Assert.assertEquals(driver.findElements(By.id("it.feio.android.omninotes.alpha:id/note_title")).size(), 0);
     }
-    /*
+    */
     //Navigazione sezione Impostazioni
     @Test
     void infoMenu() throws MalformedURLException, InterruptedException {
@@ -522,7 +522,7 @@ public class Demo {
                 driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.TextView")).getText(),
                 "Info"
         );
-    }*/
+    }
 
     @AfterClass
     public void tearDown()
