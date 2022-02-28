@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
 public class Demo {
     AndroidDriver<AndroidElement> driver;
     //Inserimento nota testuale
-    /*@Test
+    @Test
     void insertNewNote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -101,8 +101,6 @@ public class Demo {
                 noteContent.contains("New itemNew Checklist Item")
         );
     }
-
-
     //Archiviazione nota testuale
     @Test
     void archiveNote() throws MalformedURLException {
@@ -160,7 +158,6 @@ public class Demo {
 
     }
     //Cerca tra le note
-
     @Test
     void searchNote() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -231,7 +228,6 @@ public class Demo {
         );
     }
     //Inserimento nota testuale con promemoria
-
     @Test
     void insertNewNoteWithReminder() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -272,7 +268,6 @@ public class Demo {
                 "New Note With Reminder"
         );
     }
-
     //Ordinamento note
     @Test
     void sortNotes() throws MalformedURLException, InterruptedException {
@@ -322,7 +317,6 @@ public class Demo {
         );
 
     }
-
     //Aggiunta Nuova Categoria
     @Test
     void insertNewCategory() throws MalformedURLException, InterruptedException {
@@ -368,7 +362,6 @@ public class Demo {
         );
 
     }
-
     //Eliminazione Nuova Categoria
     @Test
     void deleteCategory() throws MalformedURLException, InterruptedException {
@@ -424,7 +417,6 @@ public class Demo {
             Assert.assertTrue(true);
         }
     }
-
     //Eliminazione Note e svuotamento cestino
     @Test
     void deleteNoteAndEmptyTrash() throws MalformedURLException, InterruptedException {
@@ -485,7 +477,6 @@ public class Demo {
 
         Assert.assertEquals(driver.findElements(By.id("it.feio.android.omninotes.alpha:id/note_title")).size(), 0);
     }
-    */
     //Navigazione sezione Impostazioni
     @Test
     void infoMenu() throws MalformedURLException, InterruptedException {
