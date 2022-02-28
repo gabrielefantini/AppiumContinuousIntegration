@@ -410,7 +410,7 @@ public class Demo {
         MobileElement el15 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/md_buttonDefaultPositive"));
         el15.click();
 
-        Assert.assertEquals(driver.findElement(By.xpath("//*[contains(@text, 'New Category')]")).size(), 0);
+        Assert.assertEquals(driver.findElements(By.xpath("//*[contains(@text, 'New Category')]")).size(), 0);
     }
     //Eliminazione Note e svuotamento cestino
     @Test
