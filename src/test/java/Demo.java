@@ -31,7 +31,6 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Demo {
-    AndroidDriver<AndroidElement> driver;
     //Inserimento nota testuale
     @Test
     void insertNewNote() throws MalformedURLException {
@@ -39,7 +38,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
 
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
@@ -74,7 +73,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         MobileElement el2 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
@@ -108,7 +107,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         //Inserting new note
@@ -164,7 +163,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         MobileElement el1 = (MobileElement) driver
@@ -234,7 +233,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         MobileElement el1 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
@@ -275,7 +274,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         MobileElement el2 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
@@ -324,7 +323,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         MobileElement el1 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
@@ -369,7 +368,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         MobileElement el1 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
@@ -419,7 +418,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         MobileElement el1 = (MobileElement) driver
@@ -479,7 +478,7 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 
         MobileElement el1 = (MobileElement) driver
@@ -510,9 +509,4 @@ public class Demo {
         );
     }
 
-    @AfterClass
-    public void tearDown()
-    {
-        driver.quit();
-    }
 }
