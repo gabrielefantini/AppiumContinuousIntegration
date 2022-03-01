@@ -417,7 +417,7 @@ public class Demo {
 
     }*/
     //Aggiunta Nuova Categoria
-    @Test
+    /*@Test
     void insertNewCategory() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -473,9 +473,9 @@ public class Demo {
                 "1"
         );
 
-    }
+    }*/
     //Eliminazione Nuova Categoria
-   /* @Test
+    @Test
     void deleteCategory() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -539,7 +539,7 @@ public class Demo {
         screenshot();
 
         Assert.assertEquals(driver.findElements(By.xpath("//*[contains(@text, 'New Category')]")).size(), 0);
-    }*/
+    }
 
     //Eliminazione Note e svuotamento cestino
     /*@Test
