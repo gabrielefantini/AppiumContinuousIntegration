@@ -350,7 +350,7 @@ public class Demo {
         );
     }*/
     //Ordinamento note
-    @Test
+    /*@Test
     void sortNotes() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -414,8 +414,8 @@ public class Demo {
                 "Note 3"
         );
 
-    }
-    /*
+    }*/
+
     //Aggiunta Nuova Categoria
     @Test
     void insertNewCategory() throws MalformedURLException, InterruptedException {
@@ -474,6 +474,7 @@ public class Demo {
         );
 
     }
+    /*
     //Eliminazione Nuova Categoria
     @Test
     void deleteCategory() throws MalformedURLException, InterruptedException {
