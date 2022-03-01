@@ -63,7 +63,7 @@ public class Demo {
     public static int screenNumber = 0;
 
     //Inserimento nota testuale
-    @Test
+    /*@Test
     void insertNewNote() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -103,9 +103,9 @@ public class Demo {
                         .getText(),
                 "New Note Content"
         );
-    }
+    }*/
     //Inserimento lista di controllo
-    /*@Test
+    @Test
     void insertNewChecklist() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -145,7 +145,7 @@ public class Demo {
         );
     }
     //Archiviazione nota testuale
-    @Test
+   /* @Test
     void archiveNote() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
