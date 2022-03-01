@@ -300,7 +300,7 @@ public class Demo {
     }
     */
     //Inserimento nota testuale con promemoria
-    @Test
+   /* @Test
     void insertNewNoteWithReminder() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -348,8 +348,8 @@ public class Demo {
                 ).getText(),
                 "New Note With Reminder"
         );
-    }
-    /*//Ordinamento note
+    }*/
+    //Ordinamento note
     @Test
     void sortNotes() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -415,6 +415,7 @@ public class Demo {
         );
 
     }
+    /*
     //Aggiunta Nuova Categoria
     @Test
     void insertNewCategory() throws MalformedURLException, InterruptedException {
