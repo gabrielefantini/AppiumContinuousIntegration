@@ -60,7 +60,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Demo {
 
-    AndroidDriver<AndroidElement> driver;
     public static int screenNumber = 0;
 
     //Inserimento nota testuale
@@ -70,9 +69,9 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
 
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         screenshot();
         MobileElement el1 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
         el1.click();
@@ -112,9 +111,8 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         screenshot();
         MobileElement el2 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
         el2.click();
@@ -135,7 +133,6 @@ public class Demo {
         MobileElement el6 = (MobileElement) driver.findElement(MobileBy.AccessibilityId("drawer open"));
         el6.click();
         screenshot();
-
         Assert.assertEquals(
                 driver.findElement(By.id("it.feio.android.omninotes.alpha:id/note_title"))
                         .getText(),
@@ -154,9 +151,9 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        screenshot();
         //Inserting new note
         MobileElement el1 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
         el1.click();
@@ -183,7 +180,7 @@ public class Demo {
         int screenWidth90 = (int) (.9 * screenWidth);
         int screenWidth65 = (int) (.65 * screenWidth);
         int screenWidth10 = (int) (.1 * screenWidth);
-
+        screenshot();
         MobileElement newNote = driver.findElement(By.id("it.feio.android.omninotes.alpha:id/note_title"));
 
         TouchAction touchAction = new TouchAction(driver);
@@ -219,9 +216,8 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         screenshot();
         MobileElement el1 = (MobileElement) driver
                 .findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
@@ -293,7 +289,6 @@ public class Demo {
         screenshot();
 
         ((AndroidDriver)driver).pressKey(new KeyEvent(AndroidKey.ENTER));
-
         screenshot();
         Assert.assertEquals(
                 driver.findElement(
@@ -309,9 +304,8 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         screenshot();
         MobileElement el1 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
         el1.click();
@@ -360,9 +354,8 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         screenshot();
         MobileElement el2 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
         el2.click();
@@ -427,9 +420,8 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         screenshot();
         MobileElement el1 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
         el1.click();
@@ -471,7 +463,6 @@ public class Demo {
         MobileElement el12 = (MobileElement) driver.findElement(MobileBy.AccessibilityId("drawer open"));
         el12.click();
         screenshot();
-
 
         Assert.assertEquals(
                 driver.findElement(By.id("it.feio.android.omninotes.alpha:id/count"))
@@ -487,9 +478,8 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         screenshot();
         MobileElement el1 = (MobileElement) driver.findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
         el1.click();
@@ -531,6 +521,7 @@ public class Demo {
         MobileElement el12 = (MobileElement) driver.findElement(MobileBy.AccessibilityId("drawer open"));
         el12.click();
         screenshot();
+
         MobileElement el13 = (MobileElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.ListView[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.TextView[1]"));
         AndroidTouchAction action = new AndroidTouchAction (driver);
         action.longPress(LongPressOptions.longPressOptions()
@@ -544,12 +535,7 @@ public class Demo {
         el15.click();
         screenshot();
 
-        try {
-            driver.findElement(By.xpath("//*[contains(@text, 'New Category')]"));
-            Assert.assertTrue(false);
-        } catch (org.openqa.selenium.NoSuchElementException e) {
-            Assert.assertTrue(true);
-        }
+        Assert.assertEquals(driver.findElements(By.xpath("//*[contains(@text, 'New Category')]")).size(), 0);
     }
     //Eliminazione Note e svuotamento cestino
     @Test
@@ -558,15 +544,13 @@ public class Demo {
         caps.setCapability("platformName" , "Android");
         caps.setCapability("deviceName" , "Android Emulator");
         caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         screenshot();
         MobileElement el1 = (MobileElement) driver
                 .findElement(By.id("it.feio.android.omninotes.alpha:id/fab_expand_menu_button"));
         el1.click();
         screenshot();
-
         MobileElement el2 = (MobileElement) driver
                 .findElement(By.id("it.feio.android.omninotes.alpha:id/fab_note"));
         el2.click();
@@ -600,7 +584,7 @@ public class Demo {
         el9.click();
         screenshot();
         Assert.assertEquals(driver.findElement(By.id("it.feio.android.omninotes.alpha:id/note_title")).getText(), "New Note");
-
+        screenshot();
         MobileElement el10 = (MobileElement) driver
                 .findElement(MobileBy.AccessibilityId("More options"));
         el10.click();
@@ -614,6 +598,43 @@ public class Demo {
 
         Assert.assertEquals(driver.findElements(By.id("it.feio.android.omninotes.alpha:id/note_title")).size(), 0);
     }
+    //Navigazione sezione Impostazioni
+   /* @Test
+    void infoMenu() throws MalformedURLException, InterruptedException {
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("platformName" , "Android");
+        caps.setCapability("deviceName" , "Android Emulator");
+        caps.setCapability("app" , System.getProperty("user.dir")+"/apps/OmniNotes-alphaDebug-6.1.0.apk");
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+        MobileElement el1 = (MobileElement) driver
+                .findElement(MobileBy.AccessibilityId("drawer open"));
+        el1.click();
+
+        MobileElement el2 = (MobileElement) driver
+                .findElement(By.id("it.feio.android.omninotes.alpha:id/settings"));
+        el2.click();
+
+        int screenH = (int) driver.manage().window().getSize().height;
+        int screenW = (int) driver.manage().window().getSize().width/2;
+        TouchAction touchAction = new TouchAction(driver);
+
+        touchAction.press(PointOption.point(screenW, (int) (screenH * 0.9)))
+                .moveTo(PointOption.point(screenW, (int) (screenH * 0.7)))
+                .moveTo(PointOption.point(screenW, (int) (screenH * 0.3)))
+                .release()
+                .perform();
+
+        MobileElement el3 = (MobileElement) driver
+                .findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[13]"));
+        el3.click();
+
+        Assert.assertEquals(
+                driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.TextView")).getText(),
+                "Info"
+        );
+    }*/
     //Navigazione sezione Impostazioni
     /*
     @Test
@@ -653,11 +674,6 @@ public class Demo {
         );
     }
     */
-    @AfterClass
-    public void tearDown()
-    {
-        driver.quit();
-    }
 
     public void screenshot() throws InterruptedException {
         Thread.sleep(1000);
