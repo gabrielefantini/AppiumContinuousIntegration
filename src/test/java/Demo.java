@@ -472,10 +472,10 @@ public class Demo {
                 "1"
         );
 
-    }*/
-
+    }
+    */
     //Eliminazione Nuova Categoria
-    @Test
+   /* @Test
     void deleteCategory() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -539,8 +539,8 @@ public class Demo {
         screenshot();
 
         Assert.assertEquals(driver.findElements(By.xpath("//*[contains(@text, 'New Category')]")).size(), 0);
-    }
-    /*
+    }*/
+
     //Eliminazione Note e svuotamento cestino
     @Test
     void deleteNoteAndEmptyTrash() throws MalformedURLException, InterruptedException {
@@ -601,7 +601,7 @@ public class Demo {
         screenshot();
 
         Assert.assertEquals(driver.findElements(By.id("it.feio.android.omninotes.alpha:id/note_title")).size(), 0);
-    }*/
+    }
     //Navigazione sezione Impostazioni
    /* @Test
     void infoMenu() throws MalformedURLException, InterruptedException {
