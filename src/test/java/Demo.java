@@ -106,7 +106,7 @@ public class Demo {
     }
     */
     //Inserimento lista di controllo
-   /* @Test
+    @Test
     void insertNewChecklist() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -144,7 +144,7 @@ public class Demo {
         Assert.assertTrue(
                 noteContent.contains("New itemNew Checklist Item")
         );
-    }*/
+    }
     //Archiviazione nota testuale
     /*@Test
     void archiveNote() throws MalformedURLException, InterruptedException {
@@ -542,7 +542,7 @@ public class Demo {
     }*/
 
     //Eliminazione Note e svuotamento cestino
-    @Test
+    /*@Test
     void deleteNoteAndEmptyTrash() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -601,7 +601,7 @@ public class Demo {
         screenshot();
 
         Assert.assertEquals(driver.findElements(By.id("it.feio.android.omninotes.alpha:id/note_title")).size(), 0);
-    }
+    }*/
     //Navigazione sezione Impostazioni
    /* @Test
     void infoMenu() throws MalformedURLException, InterruptedException {
@@ -680,7 +680,7 @@ public class Demo {
     */
 
     public void screenshot() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         try {
             Robot r = new Robot();
             // It saves screenshot to desired path
