@@ -680,7 +680,7 @@ public class Demo {
     */
 
     public void screenshot() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         try {
             Robot r = new Robot();
             // It saves screenshot to desired path
