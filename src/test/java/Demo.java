@@ -106,7 +106,7 @@ public class Demo {
     }
     */
     //Inserimento lista di controllo
-    /*@Test
+    @Test
     void insertNewChecklist() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -144,8 +144,9 @@ public class Demo {
         Assert.assertTrue(
                 noteContent.contains("New itemNew Checklist Item")
         );
-    }*/
-    //Archiviazione nota testuale
+        screenshot();
+    }
+    /*//Archiviazione nota testuale
     @Test
     void archiveNote() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -209,7 +210,7 @@ public class Demo {
                 driver.findElement(By.id("it.feio.android.omninotes.alpha:id/archivedIcon"))
                         .isDisplayed());
 
-    }
+    }*/
     //Cerca tra le note
     /*@Test
     void searchNote() throws MalformedURLException, InterruptedException {
