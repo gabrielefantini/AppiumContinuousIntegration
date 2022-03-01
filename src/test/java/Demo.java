@@ -105,7 +105,7 @@ public class Demo {
         );
     }
     //Inserimento lista di controllo
-    @Test
+    /*@Test
     void insertNewChecklist() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -597,7 +597,7 @@ public class Demo {
         screenshot();
 
         Assert.assertEquals(driver.findElements(By.id("it.feio.android.omninotes.alpha:id/note_title")).size(), 0);
-    }
+    }*/
     //Navigazione sezione Impostazioni
    /* @Test
     void infoMenu() throws MalformedURLException, InterruptedException {
