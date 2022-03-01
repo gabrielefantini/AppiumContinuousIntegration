@@ -146,7 +146,7 @@ public class Demo {
         );
     }*/
     //Archiviazione nota testuale
-    @Test
+    /*@Test
     void archiveNote() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -209,8 +209,8 @@ public class Demo {
                 driver.findElement(By.id("it.feio.android.omninotes.alpha:id/archivedIcon"))
                         .isDisplayed());
 
-    }
-    /*//Cerca tra le note
+    }*/
+    //Cerca tra le note
     @Test
     void searchNote() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -298,7 +298,7 @@ public class Demo {
                 "X"
         );
     }
-    //Inserimento nota testuale con promemoria
+    /*//Inserimento nota testuale con promemoria
     @Test
     void insertNewNoteWithReminder() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
