@@ -106,7 +106,7 @@ public class Demo {
     }
     */
     //Inserimento lista di controllo
-    @Test
+    /*@Test
     void insertNewChecklist() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -145,7 +145,7 @@ public class Demo {
                 noteContent.contains("New itemNew Checklist Item")
         );
         screenshot();
-    }
+    }*/
     /*//Archiviazione nota testuale
     @Test
     void archiveNote() throws MalformedURLException, InterruptedException {
@@ -212,7 +212,7 @@ public class Demo {
 
     }*/
     //Cerca tra le note
-    /*@Test
+    @Test
     void searchNote() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -298,8 +298,8 @@ public class Demo {
                 ).getText(),
                 "X"
         );
+        screenshot();
     }
-    */
     //Inserimento nota testuale con promemoria
    /* @Test
     void insertNewNoteWithReminder() throws MalformedURLException, InterruptedException {
