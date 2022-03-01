@@ -212,7 +212,7 @@ public class Demo {
 
     }*/
     //Cerca tra le note
-    @Test
+    /*@Test
     void searchNote() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -299,9 +299,9 @@ public class Demo {
                 "X"
         );
         screenshot();
-    }
+    }*/
     //Inserimento nota testuale con promemoria
-   /* @Test
+    @Test
     void insertNewNoteWithReminder() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName" , "Android");
@@ -349,7 +349,7 @@ public class Demo {
                 ).getText(),
                 "New Note With Reminder"
         );
-    }*/
+    }
     //Ordinamento note
     /*@Test
     void sortNotes() throws MalformedURLException, InterruptedException {
